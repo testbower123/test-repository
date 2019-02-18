@@ -39,7 +39,6 @@ public class MockTest {
         TodoService serviceStub = mock(TodoService.class);
         when(serviceStub.retrieveTodos("Adam")).thenReturn(input);
 
-
         TodoBusinessImpl todoBusiness = new TodoBusinessImpl(serviceStub);
 
         assertEquals(output,        todoBusiness.retrieveTodosRelatedToSpring("Adam"));
